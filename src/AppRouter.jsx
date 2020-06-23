@@ -5,10 +5,17 @@ import {
   Button, Layout, Result,
 } from 'antd';
 import HomeOutlined from '@ant-design/icons/lib/icons/HomeOutlined';
+import { Auth } from './pages';
 
 const { Content } = Layout;
 
-const appRoutes = [];
+const appRoutes = [
+  {
+    path: '/auth',
+    ex: true,
+    component: Auth,
+  },
+];
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -17,6 +24,11 @@ class AppRouter extends React.Component {
   }
 
   componentDidMount() {
+    const { userInfo, history } = this.props;
+
+    if (!userInfo) {
+      history.push('/auth');
+    }
   }
 
   render() {
@@ -57,7 +69,9 @@ class AppRouter extends React.Component {
 }
 
 function stateToProps(state) {
-  return state;
+  return {
+    userInfo: state.userInfo,
+  };
 }
 
 AppRouter.defaultProps = {};

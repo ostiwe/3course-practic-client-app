@@ -4,3 +4,10 @@ export function testAction(action) {
     payload: action,
   };
 }
+
+export function setUserInfo(userInfo) {
+  return {
+    type: 'SET_USER_INFO',
+    payload: userInfo,
+  };
+}
