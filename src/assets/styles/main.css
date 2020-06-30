@@ -6,6 +6,28 @@
 
 .app-content {
   min-height: 100vh;
+  padding: 100px;
+}
+.app-content__center {
+  display: flex;
+  justify-content: center;
+}
+.app-auth-wrapper {
+  position: relative;
+  min-width: 450px;
+  min-height: 350px;
+}
+.app-auth-wrapper[data-load=true] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-auth-wrapper__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@ import {
   Button, Layout, Result,
 } from 'antd';
 import HomeOutlined from '@ant-design/icons/lib/icons/HomeOutlined';
-import { Auth } from './pages';
+import { Auth, ControlPanel } from './pages';
 
 const { Content } = Layout;
 
@@ -14,6 +14,10 @@ const appRoutes = [
     path: '/auth',
     ex: true,
     component: Auth,
+  },
+  {
+    path: '/cp',
+    component: ControlPanel,
   },
 ];
 
@@ -25,7 +29,6 @@ class AppRouter extends React.Component {
 
   componentDidMount() {
     const { userInfo, history } = this.props;
-
     if (!userInfo) {
       history.push('/auth');
     }

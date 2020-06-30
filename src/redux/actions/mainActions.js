@@ -11,3 +11,10 @@ export function setUserInfo(userInfo) {
     payload: userInfo,
   };
 }
+
+export function setAccessToken(accessToken) {
+  return {
+    type: 'SET_ACCESS_TOKEN',
+    payload: accessToken,
+  };
+}

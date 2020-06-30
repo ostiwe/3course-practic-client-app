@@ -31,7 +31,7 @@ module.exports = {
     'no-bitwise': ['error', { allow: ['&'] }],
     'react/prop-types': [2,
       {
-        ignore: ['dispatch', 'history', 'match', 'location', 'locale','userInfo'],
+        ignore: ['dispatch', 'history', 'match', 'location', 'locale', 'userInfo'],
       }],
   },
 };

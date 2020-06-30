@@ -7,5 +7,34 @@
 .app {
   &-content {
     min-height: 100vh;
+    padding: 100px;
+
+    &__center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-auth {
+    &-wrapper {
+      position: relative;
+      min-width: 450px;
+      min-height: 350px;
+
+      &[data-load=true] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 24px;
+      }
+    }
   }
 }
+
