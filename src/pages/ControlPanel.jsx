@@ -272,15 +272,6 @@ class ControlPanel extends Component {
           forceRender
           title="Создание нового авто"
         >
-          <Drawer
-            title="Test"
-            visible={drawerWorkshopsOpen}
-            onClose={() => {
-              this.setState({ drawerWorkshopsOpen: !drawerWorkshopsOpen });
-            }}
-          >
-            test
-          </Drawer>
           <Form layout="vertical">
             <Form.Item label="Модель авто">
               <Select dropdownRender={(menu) => (
